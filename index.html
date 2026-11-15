@@ -695,6 +695,13 @@ html{font-synthesis:none}
 .band{padding:clamp(32px,4.5vw,60px) 0}
 .band.wrap{padding-left:var(--gut);padding-right:var(--gut)}
 .head{margin-bottom:clamp(22px,3vw,34px)}
+
+/* justified body text with even edges (desktop/tablet); left aligned on phones */
+@media (min-width:700px){
+main p,.lede,.dept-desc,.formnote,figcaption span{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.btn-line,.cta-row,.eyebrow,.hb-hn,.fx-note,.t-result,.team-stats span{text-align:left}
+}
+main p,.lede{text-wrap:pretty}
 </style>
 <script>document.documentElement.className="js";</script>
 <header class="topbar" id="topbar">
@@ -870,7 +877,7 @@ html{font-synthesis:none}
       <div class="prose rv">
         <p>Our mission is to make golf genuinely accessible to every Nova SBE student, regardless of experience, budget or background. Golf is one of the most useful rooms in business and one of the hardest for a student to get into: a round costs more than a night out, the equipment costs more than a semester of textbooks, and the etiquette is unwritten, which means the only way to learn it is to already know someone who plays.</p>
         <p>We exist to remove those barriers. We negotiate rates, we provide clubs, and we run formats where a beginner and a single-figure player can finish the same afternoon without either of them wishing they had not come.</p>
-        <p>Our vision is a club where picking up a club for the first time and representing Nova SBE competitively both belong on the same calendar. What that buys a student is not a hobby. It is the ability to accept an invitation. When a firm suggests a round, you can say yes, and you know what to do when you get there.</p>
+        <p>We want every Nova SBE student to be able to say yes when someone suggests a round of golf, whether they started last week or play at an experienced level.</p>
       </div>
       <div class="rv" style="--d:120ms">
         <table class="spec">

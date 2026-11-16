@@ -696,11 +696,11 @@ html{font-synthesis:none}
 .band.wrap{padding-left:var(--gut);padding-right:var(--gut)}
 .head{margin-bottom:clamp(22px,3vw,34px)}
 
-/* justified body text with even edges (desktop/tablet); left aligned on phones */
-@media (min-width:700px){
-.prose p,.card p,.pcard p,.guide p,.gal figcaption span{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
-.btn-line,.cta-row,.eyebrow,.hb-hn,.fx-note,.t-result,.team-stats span{text-align:left}
-}
+/* justified body text with even edges on every screen size */
+main p,main .lede,.dept-desc,.gal figcaption span,.callout p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3}
+.hero-photo .lede{max-width:54ch}
+main .lede{max-width:min(60ch,100%)}
+.btn-line,.cta-row,.eyebrow,.hb-hn,.t-result,.team-stats span,.formnote{text-align:left}
 main p,.lede{text-wrap:pretty}
 
 /* header and footer in the same green */

@@ -706,6 +706,9 @@ main p,.lede{text-wrap:pretty}
 /* header and footer in the same green */
 footer{background:var(--pine)}
 .topbar{background:var(--pine)}
+
+/* mobile menu: same pine green as the top bar, white links */
+@media(max-width:1050px){.nav,.nav.open{background:var(--pine)!important;border-color:rgba(255,255,255,.1)!important;box-shadow:0 12px 24px rgba(0,0,0,.25)}.nav a{color:#fff!important;border-bottom-color:rgba(255,255,255,.12)!important}.nav a:hover{background:rgba(255,255,255,.08)!important}.nav a[aria-current="page"]{color:var(--acc)!important}}
 </style>
 <script>document.documentElement.className="js";</script>
 <header class="topbar" id="topbar">

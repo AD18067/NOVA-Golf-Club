@@ -709,6 +709,51 @@ footer{background:var(--pine)}
 
 /* mobile menu: same pine green as the top bar, white links */
 @media(max-width:1050px){.nav,.nav.open{background:var(--pine)!important;border-color:rgba(255,255,255,.1)!important;box-shadow:0 12px 24px rgba(0,0,0,.25)}.nav a{color:#fff!important;border-bottom-color:rgba(255,255,255,.12)!important}.nav a:hover{background:rgba(255,255,255,.08)!important}.nav a[aria-current="page"]{color:var(--acc)!important}}
+
+/* Want to Golf: costs and questions */
+.preview-flag{position:relative;z-index:80;background:#8F6F14;color:#fff;text-align:center;font:600 12px/1.4 var(--sans);letter-spacing:.08em;padding:8px max(16px,env(safe-area-inset-left,0px))}
+.cost-venue{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:28px 0 14px}
+.cost-place{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--pine);text-transform:none}
+.cost-when{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--acc-text)}
+.cost-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cost{background:#fff;border:1px solid var(--rule);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.cost header{padding:18px 20px 12px}.cost h3{font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--pine);text-transform:none}
+.cost header p{font-size:.84rem;color:var(--graphite);margin-top:4px;text-align:left!important}
+.cost-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 20px;border-top:1px solid var(--rule)}
+.cost-row span{font-size:.86rem;color:var(--graphite)}.cost-row b{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--pine);font-variant-numeric:tabular-nums}
+.cost-row.us{background:var(--pine)}.cost-row.us span{color:#fff}.cost-row.us b{color:var(--acc)}
+.cost-note{padding:10px 20px 16px;font-size:.84rem;font-weight:700;color:var(--brand);text-align:left!important;margin-top:auto}
+.cost-how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
+.cost-how div{border-left:2px solid var(--acc);padding-left:14px}.cost-how b{display:block;margin-bottom:4px}.cost-how p{font-size:.9rem;color:var(--graphite)}
+.cost-src{font-size:.75rem;color:var(--graphite);margin-top:18px;text-align:left!important}
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 32px}
+.faq div{border-bottom:1px solid var(--rule);padding:14px 0}.faq b{display:block;font-size:1rem;color:var(--pine);margin-bottom:4px}.faq p{font-size:.92rem;color:var(--graphite)}
+@media(max-width:860px){.cost-grid,.cost-how,.faq{grid-template-columns:1fr}}
+
+.basics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px}
+.basics article{border-top:1.5px solid var(--brand);padding-top:14px}.basics h3{font-family:var(--serif);font-weight:400;font-size:1.2rem;color:var(--pine);text-transform:none;margin-bottom:6px}.basics p{font-size:.92rem;color:var(--graphite)}
+.barriers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.barriers article{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.b-tag{font-family:var(--serif);font-size:1.5rem;color:var(--pine)}
+.b-prob{font-size:.92rem;color:var(--graphite);text-align:left!important}
+.b-fix{font-size:.95rem;font-weight:600;color:var(--brand);border-top:1px solid var(--rule);padding-top:10px;text-align:left!important}
+#access .cta-row{margin-top:22px}
+@media(max-width:860px){.basics,.barriers{grid-template-columns:1fr}}
+
+.tourgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tcard{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.t-tour{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--acc-text)}
+.tcard h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--pine);text-transform:none}
+.tcard p{font-size:.92rem;color:var(--graphite);text-align:left!important}
+.tcard .go{margin-top:auto;font-size:.82rem;font-weight:600;color:var(--brand);text-decoration:none}
+@media(max-width:860px){.tourgrid{grid-template-columns:1fr}}
+.jump{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px}.jump span{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--acc-text);margin-right:4px}.jump a{font-size:.88rem;padding:7px 14px;border:1px solid var(--rule);border-radius:999px;color:var(--pine);text-decoration:none;background:#fff}
+.faqg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.fg h3{display:flex;gap:10px;align-items:center;font-size:1.05rem;color:var(--pine);margin-bottom:6px}.fg h3 span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--pine);color:#fff;font-size:.8rem;font-family:inherit}
+.fg details{border-bottom:1px solid var(--rule)}.fg summary{cursor:pointer;list-style:none;padding:13px 28px 13px 0;position:relative;font-weight:600;color:var(--pine);font-size:.97rem}.fg summary::-webkit-details-marker{display:none}.fg summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:1.3rem;color:var(--acc-text)}.fg details[open] summary::after{content:"–"}.fg details p{padding:0 0 14px;font-size:.92rem;color:var(--graphite)}
+.nextstep{margin-top:28px;padding:20px 22px;background:var(--pine);color:#fff;border-radius:6px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}.nextstep p{margin:0;color:#fff}.ns-btns{display:flex;flex-wrap:wrap;gap:10px}.nextstep .btn-line:not(.solid){color:#fff;border-color:rgba(255,255,255,.6)}
+@media(max-width:900px){.faqg{grid-template-columns:1fr;gap:18px}.ns-btns,.ns-btns a{width:100%;text-align:center}}
+html{scroll-behavior:smooth}#first-round,#gloss,#costs,#tour{scroll-margin-top:80px}
 </style>
 <script>document.documentElement.className="js";</script>
 <header class="topbar" id="topbar">
@@ -721,7 +766,7 @@ footer{background:var(--pine)}
       <a href="#committee" data-go="committee">Meet the Team</a>
       <a href="#team" data-go="team">Golf team</a>
       <a href="#partners" data-go="partners">Partners</a>
-      
+      <a href="#learn" data-go="learn">Want to Golf</a>
       <a href="#join" data-go="join">Join</a>
     </nav>
     <a href="#companies" class="btn-pin" data-go="companies">Partner with us</a>
@@ -753,6 +798,17 @@ footer{background:var(--pine)}
     </div>
   </div>
   <div style="height:clamp(30px,5vw,54px)"></div>
+  <div class="band wrap" id="access">
+    <div class="head rv"><span class="eyebrow">Our mission</span><h2 class="display d-m">Golf should be open to every student</h2>
+      <p style="margin-top:14px;color:#25402F">Three things keep most students off the course. Here's what we do about each one.</p></div>
+    <div class="barriers rv">
+      <article><span class="b-tag">Cost</span><p class="b-prob">A round costs more than a night out.</p><p class="b-fix">We book as a group, so 9 holes cost €19 with us.</p></article>
+      <article><span class="b-tag">Equipment</span><p class="b-prob">A set of clubs costs more than a semester of textbooks.</p><p class="b-fix">Every beginner class includes clubs, and two players can share one set of hire clubs for the round.</p></article>
+      <article><span class="b-tag">Etiquette</span><p class="b-prob">Nobody writes the rules down.</p><p class="b-fix">In your first 90 minutes, a golf professional takes you through the short game (putter and wedges), the long game (irons and driver) and the etiquette.</p></article>
+    </div>
+    <div class="cta-row rv"><button class="btn-line solid" data-go="learn">Never played? Start here</button><button class="btn-line" data-go="events">See the next event</button></div>
+  </div>
+
 
   <div class="marquee rv" role="region" aria-label="Partners and affiliations">
     <div class="marquee-viewport">
@@ -823,7 +879,7 @@ footer{background:var(--pine)}
         <p style="margin-top:14px;color:#25402F">A round means four hours on the course with three other people. That's why companies take clients out for a round, and why so many business relationships are built on the course. We want every student to have that time, whatever their level.</p>
       </div>
       <div class="cols-3">
-        <div class="card rv"><span class="card-num">01</span><h3>Start from zero</h3><p>About half the people at our events have never played. We bring the clubs and show you the basics, so all you need to do is turn up.</p><button class="go" data-go="events">See upcoming events →</button></div>
+        <div class="card rv"><span class="card-num">01</span><h3>Start from zero</h3><p>About half the people at our events have never played. We bring the clubs and show you the basics, so all you need to do is turn up.</p><button class="go" data-go="learn">Start here →</button></div>
         <div class="card rv" style="--d:110ms"><span class="card-num">02</span><h3>Meet people in the industry</h3><p>At our corporate events, students and professionals play in the same group. A round of eighteen holes gives you time for a proper conversation.</p><button class="go" data-go="companies">How firms take part →</button></div>
         <div class="card rv" style="--d:220ms"><span class="card-num">03</span><h3>Play for Nova SBE</h3><p>Our golf team plays against other universities. In November it finished 1st in the Team Net at the Bocconi &amp; Friends Golf Cup in Milan.</p><button class="go" data-go="team">The golf team →</button></div>
       </div>
@@ -1264,7 +1320,76 @@ footer{background:var(--pine)}
   </div>
 </section>
 
-<!-- Want to Golf page removed 15 Nov 2026; content saved in Notion for when partnerships are in place -->
+<!-- ══════════════════ WANT TO GOLF ══════════════════ -->
+<section class="page" id="learn">
+  <div class="band wrap">
+    <div class="rv">
+      <span class="eyebrow">Want to golf</span>
+      <h1 class="display d-l" style="margin:8px 0 20px;max-width:18ch">Never played? Start here</h1>
+      <p class="lede" style="margin-bottom:26px">You don't need clubs, a handicap or any experience. Pick one of our Swing &amp; Sip events, sign up through the link in our Instagram bio and come along to the beginner class. In 90 minutes, a golf professional takes you through the short game (putter and wedges) and the long game (irons and driver). Afterwards, everyone stays for a drink.</p>
+      <div class="cta-row"><button class="btn-line solid" data-go="events">See the next event</button><a class="btn-line" href="https://chat.whatsapp.com/Cbwk7Z2jPB3FLCKi4oJWH8" target="_blank" rel="noopener">Join the WhatsApp community</a></div>
+    </div>
+  </div>
+
+  <div class="band band-tint" id="first-round">
+    <div class="wrap">
+      <div class="head rv"><span class="eyebrow">Before your first round</span><h2 class="display d-m">Everything you need to know</h2></div>
+      <nav class="jump rv" aria-label="On this page"><span>On this page</span><a href="#learn" data-go="learn" data-scroll="first-round">First round</a><a href="#learn" data-go="learn" data-scroll="gloss">Glossary</a><a href="#learn" data-go="learn" data-scroll="costs">Costs</a><a href="#learn" data-go="learn" data-scroll="tour">Golf this week</a></nav>
+      <div class="faqg rv"><div class="fg"><h3><span>1</span>The basics</h3><details open><summary>How does golf work?</summary><p>Get the ball into the hole in as few shots as possible, over nine or eighteen holes. Everything else is detail.</p></details><details><summary>What if I've never held a club?</summary><p>Neither have about half the people at our events. That's exactly who the beginner class is for.</p></details><details><summary>What's the etiquette?</summary><p>Stand still while someone swings, keep up with the group in front, repair the mark your ball makes on the green and rake the bunker after you. That's most of it.</p></details></div><div class="fg"><h3><span>2</span>What to wear and bring</h3><details><summary>What should I wear?</summary><p>A collared shirt (a polo is ideal) with chinos, tailored trousers or tailored shorts, and trainers or golf shoes with soft soles. No jeans, tracksuits, gym shorts or football shirts. If you're unsure, ask us before the event.</p></details><details><summary>Do I need my own clubs?</summary><p>No. Clubs are included in the beginner class, and two players can share one set of hire clubs for the 9-hole round. When you want your own, look second-hand on Vinted, OLX, eBay or Facebook Marketplace. Used clubs are cheap and usually in good condition.</p></details><details><summary>Where can I get golf clothes?</summary><p>You don't need special clothes to start. A polo shirt and chinos you already own will do. For golf shoes and clothes at student prices, try Decathlon or the same second-hand apps.</p></details></div><div class="fg"><h3><span>3</span>Joining in</h3><details><summary>Do I need a handicap or a membership?</summary><p>No. Only the golf team needs a handicap, and club membership is coming soon. You don't need either for our open events.</p></details><details><summary>Can I bring a friend?</summary><p>Yes. Our events are open to every Nova SBE student, so sign up together.</p></details></div></div>
+      <div class="nextstep rv"><p><b>Ready to try it?</b> See what it costs, then pick an event.</p><div class="ns-btns"><a class="btn-line solid" href="#learn" data-go="learn" data-scroll="costs">What you'll pay ↓</a><a class="btn-line" href="#" data-go="events">See upcoming events →</a></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band wrap" id="gloss">
+    <div class="head rv"><span class="eyebrow">Glossary</span><h2 class="display d-m">Words you'll hear on the course</h2></div>
+    <dl class="gloss rv">
+      <div><dt>Par</dt><dd>The number of shots a good player should take on a hole. Usually three, four or five.</dd></div>
+      <div><dt>Birdie and bogey</dt><dd>One shot under par, and one shot over. Bogeys are far more common.</dd></div>
+      <div><dt>Tee</dt><dd>Both the peg you rest the ball on and the area you start each hole from.</dd></div>
+      <div><dt>Green</dt><dd>The very short grass around the hole, where you putt.</dd></div>
+      <div><dt>Fairway</dt><dd>The mown strip between tee and green. Where you're aiming.</dd></div>
+      <div><dt>Rough</dt><dd>The longer grass either side. Where the ball often ends up.</dd></div>
+      <div><dt>Bunker</dt><dd>A sand hazard. Rake it after you play out of it.</dd></div>
+      <div><dt>Scramble</dt><dd>A team format where everyone plays from the best shot in the group.</dd></div>
+      <div><dt>Stroke play</dt><dd>Everyone counts every shot. The standard tournament format.</dd></div>
+      <div><dt>Flight</dt><dd>A group of players going round together. Also called a fourball.</dd></div>
+      <div><dt>The turn</dt><dd>The break between the ninth and tenth holes. A good moment for a chat.</dd></div>
+      <div><dt>Honour</dt><dd>The right to tee off first, held by whoever scored best on the previous hole.</dd></div>
+    </dl>
+  </div>
+
+  <div class="band band-tint" id="costs"><div class="wrap">
+    <div class="head rv"><span class="eyebrow">How we make golf affordable</span><h2 class="display d-m">How much it costs</h2>
+      <p style="margin-top:14px;color:#25402F">We book as a group, provide clubs and organise the coaching ourselves, so students pay less than the normal price.</p></div>
+    <div class="cost-venue rv"><h3 class="cost-place">At Jamor</h3><span class="cost-when">Swing &amp; Sip, spring 2026</span></div>
+    <div class="cost-grid rv"><article class="cost"><header><h3>Beginner class</h3><p>About 90 minutes with a coach, clubs included</p></header><div class="cost-row"><span>Group lesson at Jamor, 45 min</span><b>€17.50</b></div><div class="cost-row us"><span>Our beginner class</span><b>€15</b></div><p class="cost-note">Twice as long, for less</p></article><article class="cost"><header><h3>9 holes</h3><p>Centro Nacional de Formação de Golf Jamor</p></header><div class="cost-row"><span>Normal price</span><b>€24</b></div><div class="cost-row us"><span>With Nova Golf Club</span><b>€19</b></div><p class="cost-note">About 20% less</p></article><article class="cost"><header><h3>Clubs for the round</h3><p>If you don't have your own</p></header><div class="cost-row"><span>Hire clubs at our events</span><b>€15</b></div><div class="cost-row us"><span>Shared between two</span><b>€7.50</b></div><p class="cost-note">Each player pays half</p></article></div>
+    <div class="cost-venue rv"><h3 class="cost-place">At Clube de Golf do Estoril</h3><span class="cost-when">Swing &amp; Sip, Sunday 29 November</span></div>
+    <div class="cost-grid rv"><article class="cost"><header><h3>Beginner class</h3><p>90 minutes with a golf professional, clubs included</p></header><div class="cost-row"><span>Hire clubs alone, normally</span><b>€45</b></div><div class="cost-row us"><span>Our class, clubs included</span><b>€20</b></div><p class="cost-note">Try every part of the game in 90 minutes</p></article><article class="cost"><header><h3>9 holes, Blue course</h3><p>Clube de Golf do Estoril, Sunday 29 November</p></header><div class="cost-row"><span>Normal weekend price</span><b>€25</b></div><div class="cost-row us"><span>With Nova Golf Club</span><b>€19</b></div><p class="cost-note">€6 less, no membership needed</p></article><article class="cost"><header><h3>Clubs for the round</h3><p>If you don't have your own</p></header><div class="cost-row"><span>Hire clubs, per set</span><b>€45</b></div><div class="cost-row us"><span>Shared between two</span><b>€22.50</b></div><p class="cost-note">Each player pays half</p></article></div>
+    <div class="cost-how rv">
+      <div><b>We book as a group</b><p>Booking for the whole club gets a better rate than one student booking alone.</p></div>
+      <div><b>We provide the clubs</b><p>Every beginner class includes clubs, and two players can share one set of hire clubs for the round.</p></div>
+      <div><b>We bring the professional</b><p>Every beginner class is run by a golf professional, so you get proper coaching from day one.</p></div>
+    </div>
+    <p class="cost-src">Normal prices from Jamor's public price list and Clube de Golf do Estoril's public rates. Our prices from our Swing &amp; Sip events.</p>
+    </div>
+  </div>
+
+
+  <div class="band" id="tour">
+    <div class="wrap">
+      <div class="head rv"><span class="eyebrow">Follow the pros</span><h2 class="display d-m">Golf this week</h2>
+        <p style="margin-top:14px;color:#25402F">Having someone to follow is the quickest way to get into golf. We update this every week with what's on across the PGA Tour, the DP World Tour, the majors, the Ryder Cup and the Presidents Cup.</p></div>
+      <div class="tourgrid rv" id="tourThisWeek">
+        <article class="tcard"><span class="t-tour">PGA Tour</span><h3>RSM Classic</h3><p>19 to 22 November 2026, Sea Island, Georgia, USA. The last event of the PGA Tour season.</p><a class="go" href="https://www.pgatour.com/leaderboard" target="_blank" rel="noopener">Live leaderboard →</a></article>
+        <article class="tcard"><span class="t-tour">DP World Tour</span><h3>No event this week</h3><p>The 2026 season finished with the DP World Tour Championship in Dubai on 15 November.</p></article>
+        <article class="tcard"><span class="t-tour">Majors and team events</span><h3>Coming up in 2027</h3><p>The Masters in April is the first major of the year. The Ryder Cup comes to Adare Manor, Ireland, in September.</p></article>
+      </div>
+      <p class="cost-src">Updated weekly, so it may not always be exact. Last updated 17 November 2026.</p>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══════════════════ JOIN ══════════════════ -->
 <section class="page" id="join">
@@ -1436,7 +1561,7 @@ footer{background:var(--pine)}
       </div>
       <div>
         <h4>Club</h4>
-        <a href="#club" data-go="club">Mission</a><a href="#committee" data-go="committee">Meet the Team</a><a href="#team" data-go="team">Golf team</a>
+        <a href="#club" data-go="club">Mission</a><a href="#committee" data-go="committee">Meet the Team</a><a href="#team" data-go="team">Golf team</a><a href="#learn" data-go="learn">Want to Golf</a>
       </div>
       <div>
         <h4>Take part</h4>
@@ -1570,7 +1695,7 @@ function show(id, push, scrollTarget){
     try{ history.pushState(null,'','#'+id); }catch(e){}
   }
   var target = scrollTarget ? document.getElementById(scrollTarget) : null;
-  if(target){ target.scrollIntoView({block:'start'}); }
+  if(target){ target.scrollIntoView({block:'start',behavior:'smooth'}); }
   else { window.scrollTo(0,0); }
   document.title = id === 'home' ? 'Nova Golf Club · Nova SBE'
     : id.charAt(0).toUpperCase()+id.slice(1)+' · Nova Golf Club';

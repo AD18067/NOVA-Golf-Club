@@ -1134,6 +1134,11 @@ h1,h2,h3,h4,.display,.mark-text,.record .n{font-weight:700!important}
     #events .tk-add input{accent-color:#D8B13E;width:18px;height:18px;margin:2px 0 0}
     #events .tk-add label{color:#fff;font-size:.95rem;cursor:pointer}
     #events .tk-add small{display:block;color:#B9D6C4;font-size:.8rem}
+    #events .tk-share{display:grid;gap:8px;margin:-4px 0 0 28px}
+    #events .tk-sh{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.18);cursor:pointer;color:#DCEBE2;font-size:.9rem}
+    #events .tk-sh input{accent-color:#D8B13E;margin:0;width:16px;height:16px}
+    #events .tk-sh b{color:var(--acc,#D8B13E);font-variant-numeric:tabular-nums}
+    #events .tk-sh.sel{border-color:var(--acc,#D8B13E);background:rgba(216,177,62,.1)}
     #events .tk-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,255,255,.18);padding-top:12px;margin-top:2px}
     #events .tk-total span{color:#DCEBE2;font-size:.95rem}
     #events .tk-total b{font-size:2.4rem;line-height:1;color:var(--acc,#D8B13E);font-variant-numeric:tabular-nums}
@@ -1182,7 +1187,11 @@ h1,h2,h3,h4,.display,.mark-text,.record .n{font-weight:700!important}
           <h4>Build your afternoon</h4>
           <label class="tk-opt sel" for="tk9"><input type="radio" name="tkAct" id="tk9" value="9" checked><span><b>Play 9 holes, 2pm</b><small>Blue course, with the startup challenge</small></span><span class="pr">€19</span></label>
           <label class="tk-opt" for="tkB"><input type="radio" name="tkAct" id="tkB" value="b"><span><b>Beginner class, 3pm</b><small>With a golf professional, clubs included</small></span><span class="pr">€20</span></label>
-          <div class="tk-add" id="tkAdd"><input type="checkbox" id="tkHire"><label for="tkHire">Add hire clubs, €22.50<small id="tkHireNote">Two players share one set. Only with the 9 holes.</small></label></div>
+          <div class="tk-add" id="tkAdd"><input type="checkbox" id="tkHire"><label for="tkHire">Hire clubs<small id="tkHireNote">Only with the 9 holes. Are you sharing a set?</small></label></div>
+          <div class="tk-share" id="tkShare" hidden role="radiogroup" aria-label="Sharing hire clubs">
+            <label class="tk-sh" for="tkShY"><input type="radio" name="tkSh" id="tkShY" value="y" checked><span>Sharing a set with another player</span><b>€22.50</b></label>
+            <label class="tk-sh" for="tkShN"><input type="radio" name="tkSh" id="tkShN" value="n"><span>My own set</span><b>€45</b></label>
+          </div>
           <div class="tk-total"><span>You pay</span><b id="tkTotal">€19</b></div>
           <p class="tk-sum" id="tkSum">9 holes, your own clubs</p>
           <p class="tk-close">Sign-ups close today, Friday 27 November</p>
@@ -2222,12 +2231,15 @@ catch(err){
     document.getElementById('cdD').textContent=Math.floor(s/86400);document.getElementById('cdH').textContent=pad(Math.floor(s%86400/3600));
     document.getElementById('cdM').textContent=pad(Math.floor(s%3600/60));document.getElementById('cdS').textContent=pad(s%60);setTimeout(tick,1000)}
   tick();
-  var hire=document.getElementById('tkHire'), add=document.getElementById('tkAdd');
+  var hire=document.getElementById('tkHire'), add=document.getElementById('tkAdd'), share=document.getElementById('tkShare');
   function money(v){return '€'+(v%1?v.toFixed(2):v)}
   function calc(){var act=tk.querySelector('input[name="tkAct"]:checked').value, t, sum;
     tk.querySelectorAll('.tk-opt').forEach(function(l){l.classList.toggle('sel',l.querySelector('input').checked)});
-    if(act==='9'){hire.disabled=false;add.classList.remove('off');t=19+(hire.checked?22.5:0);sum=hire.checked?'9 holes €19 + hire clubs €22.50':'9 holes, your own clubs'}
-    else{hire.checked=false;hire.disabled=true;add.classList.add('off');t=20;sum='Beginner class, clubs included'}
+    var sh=tk.querySelector('input[name="tkSh"]:checked').value, clubs=sh==='y'?22.5:45;
+    tk.querySelectorAll('.tk-sh').forEach(function(l){l.classList.toggle('sel',l.querySelector('input').checked)});
+    if(act==='9'){hire.disabled=false;add.classList.remove('off');share.hidden=!hire.checked;t=19+(hire.checked?clubs:0);
+      sum=hire.checked?('9 holes €19 + '+(sh==='y'?'shared hire set €22.50':'own hire set €45')):'9 holes, your own clubs'}
+    else{hire.checked=false;hire.disabled=true;add.classList.add('off');share.hidden=true;t=20;sum='Beginner class, clubs included'}
     document.getElementById('tkTotal').textContent=money(t);document.getElementById('tkSum').textContent=sum}
   tk.querySelectorAll('input').forEach(function(i){i.addEventListener('change',calc)}); calc();
   var fine=window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -1025,28 +1025,70 @@ h1,h2,h3,h4,.display,.mark-text,.record .n{font-weight:700!important}
 
 <!-- ══════════════════ CLUB ══════════════════ -->
 <section class="page" id="club">
+  <style id="mission-boxes-css">
+  /* MISSION AS BOXES (Nov 2026) */
+  #club .m-intro{max-width:62ch;font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.55;margin:0;color:var(--ink,#0F2418)}
+  #club .m-intro b{color:var(--pine,#04361D)}
+  #club .m-vision{max-width:62ch;margin:14px 0 0;color:#3B5446}
+  #club .m-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:34px 0 0}
+  #club .m-fact{border-top:3px solid var(--acc,#D8B13E);background:#fff;border-radius:6px;padding:16px 18px;box-shadow:0 1px 2px rgba(4,54,29,.06)}
+  #club .m-fact b{display:block;font-size:1.35rem;line-height:1.15;color:var(--pine,#04361D)}
+  #club .m-fact span{display:block;margin-top:6px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#5B6E62;font-weight:700}
+  #club .m-head{margin:clamp(44px,6vw,72px) 0 18px}
+  #club .m-head h2{margin:6px 0 6px}
+  #club .m-head p{margin:0;color:#3B5446;max-width:60ch}
+  #club .m-grid{display:grid;gap:14px}
+  #club .m-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+  #club .m-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #club .m-box{background:#fff;border:1px solid rgba(4,54,29,.12);border-radius:8px;padding:22px 20px 24px;display:flex;flex-direction:column;gap:10px}
+  #club .m-box .m-n{font-size:.72rem;letter-spacing:.18em;color:var(--acc-text,#8F6F14);font-weight:700}
+  #club .m-box h3{margin:0;font-size:1.25rem;line-height:1.15;color:var(--pine,#04361D);text-transform:none}
+  #club .m-box p{margin:0;color:#3B5446;font-size:.95rem;line-height:1.55}
+  #club .m-box.dark{background:var(--pine,#04361D);border-color:var(--pine,#04361D)}
+  #club .m-box.dark h3{color:#fff}
+  #club .m-box.dark p{color:#B9D6C4}
+  #club .m-box.dark .m-n{color:var(--acc,#D8B13E)}
+  @media(max-width:980px){#club .m-facts,#club .m-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}#club .m-grid.three{grid-template-columns:1fr}}
+  @media(max-width:560px){#club .m-facts,#club .m-grid.four{grid-template-columns:1fr}}
+  </style>
   <div class="band wrap">
     <div class="rv">
       <span class="eyebrow">Our mission</span>
-      <h1 class="display d-l" style="margin:8px 0 32px;max-width:17ch">Your first swing doesn't have to count</h1>
+      <h1 class="display d-l" style="margin:8px 0 22px;max-width:17ch">Your first swing doesn't have to count</h1>
+      <p class="m-intro"><b>We make golf easy to get into for every Nova SBE student, whatever their experience, budget or background.</b></p>
+      <p class="m-vision">Golf is one of the best places to make business connections, but students rarely get to play. We want every Nova student to be able to say yes when someone suggests a round.</p>
     </div>
-    <div class="cols-2">
-      <div class="prose rv">
-        <p>Our mission is to make golf easy to get into for every Nova SBE student, whatever their experience, budget or background. Golf is one of the best places to make business connections, but students rarely get the chance to play. A round costs more than a night out, a set of clubs costs more than a semester of textbooks, and nobody writes the etiquette down, so you only learn it if you already know someone who plays.</p>
-        <p>That's what we're here to fix. We help students find better rates, provide clubs for beginners, and run formats where a first-timer and an experienced player can enjoy the same afternoon.</p>
-        <p>Our vision is simple. We want every Nova SBE student to be able to say yes when someone suggests a round of golf, whether they started last week or are already experienced players.</p>
-      </div>
-      <div class="rv" style="--d:120ms">
-        <table class="spec">
-          <tr><td>Founded</td><td>2025, Nova SBE, Carcavelos</td></tr>
-          <tr><td>Home course</td><td>Centro Nacional de Formação de Golf Jamor, Cruz Quebrada</td></tr>
-          <tr><td>Open to</td><td>Every Nova student, any level</td></tr>
-          <tr><td>Bookings</td><td>Get in touch and we'll send you booking details. We provide clubs for beginner classes, and you can hire clubs for everything else.</td></tr>
-          <tr><td>Recognised by</td><td>Nova SBE Student Union</td></tr>
-        </table>
-        <div class="pills"><span class="pill">Clubs provided</span><span class="pill">No handicap needed</span><span class="pill">Coaching included</span><span class="pill">Mixed-ability formats</span></div>
-      </div>
+
+    <div class="m-facts rv">
+      <div class="m-fact"><b>2025</b><span>Founded at Nova SBE</span></div>
+      <div class="m-fact"><b>Jamor</b><span>Home course</span></div>
+      <div class="m-fact"><b>Any level</b><span>Open to every Nova student</span></div>
+      <div class="m-fact"><b>Student Union</b><span>Recognised by Nova SBE SU</span></div>
     </div>
+
+    <div class="m-head rv">
+      <span class="eyebrow">Our values</span>
+      <h2 class="display d-m">What we stand for</h2>
+      <p>How we run the club, on the course and off it.</p>
+    </div>
+    <div class="m-grid four rv">
+      <article class="m-box dark"><span class="m-n">01</span><h3>Inclusivity &amp; access</h3><p>Every Nova student is welcome, whatever their background, budget or skill level.</p></article>
+      <article class="m-box dark"><span class="m-n">02</span><h3>Community &amp; network</h3><p>We build friendships and professional ties that last well beyond the last hole.</p></article>
+      <article class="m-box dark"><span class="m-n">03</span><h3>Personal growth</h3><p>Golf builds confidence, skill and character, on the course and in your career.</p></article>
+      <article class="m-box dark"><span class="m-n">04</span><h3>Integrity &amp; sportsmanship</h3><p>We play honestly and fairly, and treat every player and every course with respect.</p></article>
+    </div>
+
+    <div class="m-head rv">
+      <span class="eyebrow">What we do</span>
+      <h2 class="display d-m">Three things keep students off the course</h2>
+      <p>Here is how we take each one away.</p>
+    </div>
+    <div class="m-grid three rv">
+      <article class="m-box"><h3>Cost</h3><p>A round costs more than a night out. We book as a group to get students better rates.</p></article>
+      <article class="m-box"><h3>Equipment</h3><p>Clubs cost more than a semester of textbooks. Beginner classes include clubs, and you can hire them for everything else.</p></article>
+      <article class="m-box"><h3>Etiquette</h3><p>Nobody writes the rules down. Our formats let a first-timer and an experienced player enjoy the same afternoon.</p></article>
+    </div>
+    <p class="rv" style="margin-top:22px;color:#3B5446">Want to play? Get in touch and we'll send you booking details.</p>
   </div>
 
 
